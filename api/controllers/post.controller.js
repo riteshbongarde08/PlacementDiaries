@@ -82,7 +82,7 @@ export const create = async (req, res, next) => {
         <div class="email-body">
             <p>Dear User,</p>
 
-            <p>Thank you for sharing your post with CampusDiaries! We appreciate your contribution and look forward to seeing more amazing content from you.</p>
+            <p>Thank you for sharing your post with PlacementDiaries! We appreciate your contribution and look forward to seeing more amazing content from you.</p>
 
             <p>Your post is now live and available for others to enjoy.</p>
 
@@ -93,7 +93,7 @@ export const create = async (req, res, next) => {
             <p>Best regards,<br>Campus Diaries Team</p>
         </div>
         <div class="email-footer">
-            <p>Need help? Contact us at <a href="mailto:campusdiaries19@gmail.com">campusdiaries19@gmail.com</a>.</p>
+            <p>Need help? Contact us at <a href="mailto:placementdiariestkiet@gmail.com">placementdiadirestkiet@gmail.com</a>.</p>
         </div>
     </div>
 </body>

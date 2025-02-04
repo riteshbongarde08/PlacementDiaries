@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-    authDomain: "campusdiaries-addc4.firebaseapp.com",
-    projectId: "campusdiaries-addc4",
-    storageBucket: "campusdiaries-addc4.firebasestorage.app",
-    messagingSenderId: "574368131237",
-    appId: "1:574368131237:web:dc566f730caf7791ad454c"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: "placementdiaries-2c32f.firebaseapp.com",
+  projectId: "placementdiaries-2c32f",
+  storageBucket: "placementdiaries-2c32f.firebasestorage.app",
+  messagingSenderId: "895946401011",
+  appId: "1:895946401011:web:b0e331e837e1e607e0c386"
 };
+
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);

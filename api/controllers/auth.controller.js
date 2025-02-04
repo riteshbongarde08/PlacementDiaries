@@ -121,14 +121,14 @@ export const signup = async (req, res, next) => {
             <p>Best regards,<br>Campus Diaries Team</p>
         </div>
         <div class="email-footer">
-            <p>Need help? Contact us at <a href="mailto:campusdiaries19@gmail.com">campusdiaries19@gmail.com</a>.</p>
+            <p>Need help? Contact us at <a href="mailto:placementdiariestkiet@gmail.com">placementdiariestkiet@gmail.com</a>.</p>
         </div>
     </div>
 </body>
 </html>
 `;
 
-            await sendEmail(email, subject, htmlContent);
+            sendEmail(email, subject, htmlContent);
             return res.json({ success: true, message: 'OTP sent to your email' });
         }
 

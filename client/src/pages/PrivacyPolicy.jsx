@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
         <div className='min-h-screen flex items-center justify-center'>
             <div className='max-w-2xl mx-auto p-3 text-center'>
                 <div>
-                    <h1 className='text-3xl font-semibold text-center my-7'>Privacy Policy for CampusDiaries</h1>
+                    <h1 className='text-3xl font-semibold text-center my-7'>Privacy Policy for PlacementDiaries</h1>
                     <div className='text-md text-gray-500 flex flex-col gap-6 text-left'>
                         <p><strong>Effective Date:</strong> [Insert Date]</p>
                         <p><strong>Information We Collect</strong></p>
@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
                         </ul>
                         <p><strong>How We Use Your Information</strong></p>
                         <ul className='list-disc list-inside'>
-                            <li>To operate and improve CampusDiaries</li>
+                            <li>To operate and improve PlacementDiaries</li>
                             <li>To communicate with users</li>
                             <li>To personalize user experience</li>
                             <li>For analytics and platform improvement</li>
@@ -38,8 +38,8 @@ export default function PrivacyPolicy() {
                             <li>Opt-out of communications</li>
                         </ul>
                         <p><strong>Contact Us</strong></p>
-                        <p>Email: campusdiaries19@gmail.com</p>
-                        <p>By using CampusDiaries, you agree to this privacy policy.</p>
+                        <p>Email: placementdiariestkiet@gmail.com</p>
+                        <p>By using PlacementDiaries, you agree to this privacy policy.</p>
                     </div>
                 </div>
             </div>
