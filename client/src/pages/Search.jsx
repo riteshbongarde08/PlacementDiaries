@@ -7,7 +7,8 @@ export default function Search() {
     const [sidebarData, setSidebarData] = useState({
         searchTerm: '',
         sort: 'desc',
-        category: 'placement'
+        category: 'placement',
+        branchName: ''
     });
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -19,13 +20,15 @@ export default function Search() {
         const searchTermFromUrl = urlParams.get('searchTerm');
         const sortFromUrl = urlParams.get('sort') || 'desc';
         const categoryFromUrl = urlParams.get('category') || 'placement';
+        const branchNameFromUrl = urlParams.get('branchName') || '';
 
-        if (searchTermFromUrl || sortFromUrl || categoryFromUrl) {
+        if (searchTermFromUrl || sortFromUrl || categoryFromUrl || branchNameFromUrl) {
             setSidebarData({
                 ...sidebarData,
                 searchTerm: searchTermFromUrl,
                 sort: sortFromUrl,
                 category: categoryFromUrl,
+                branchName: branchNameFromUrl,
             })
         }
         const fetchPosts = async () => {
@@ -64,6 +67,10 @@ export default function Search() {
             const category = e.target.value || 'placement';
             setSidebarData({ ...sidebarData, category })
         }
+        if (e.target.id === 'branchName') {
+            const branchName = e.target.value || '';
+            setSidebarData({ ...sidebarData, branchName })
+        }
     };
 
     const handleSubmit = (e) => {
@@ -72,6 +79,7 @@ export default function Search() {
         urlParams.set('searchTerm', sidebarData.searchTerm);
         urlParams.set('sort', sidebarData.sort);
         urlParams.set('category', sidebarData.category);
+        urlParams.set('branchName', sidebarData.branchName);
         const searchQuery = urlParams.toString();
         navigate(`/search?${searchQuery}`);
     };
@@ -105,7 +113,6 @@ export default function Search() {
                     <div className='flex items-center gap-2 '>
                         <label className='whitespace-nowrap font-semibold'>Search Term:</label>
                         <TextInput placeholder='Search...' id='searchTerm' type='text' value={sidebarData.searchTerm} onChange={handleChange} />
-
                     </div>
                     <div className='flex items-center gap-2'>
                         <label className='font-semibold'>Sort:</label>
@@ -119,6 +126,17 @@ export default function Search() {
                         <Select className='' onChange={handleChange} value={sidebarData.category} id='category'>
                             <option value="placement">Placement</option>
                             <option value="internship">Internship</option>
+                        </Select>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <label className='font-semibold'>Branch:</label>
+                        <Select className='' onChange={handleChange} value={sidebarData.branchName} id='branchName'>
+                            <option value="">All</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="EnTC">EnTC</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Chemical">Chemical</option>
+                            <option value="Mechanical">Mechanical</option>
                         </Select>
                     </div>
                     <Button type='submit' outline gradientDuoTone='purpleToPink'>
@@ -140,7 +158,6 @@ export default function Search() {
                             <PostCard key={post._id} post={post} />
                         ))
                     }
-
                 </div>
                 <div>
                     {

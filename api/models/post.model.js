@@ -32,6 +32,14 @@ const postSchema = new mongoose.Schema(
             required: true,
             unique: true,
         },
+        branchName:{
+            type: String,
+            required: true,
+        },
+        youtubeUrl: {
+            type: String,
+            default: '',
+        }
     }, { timestamps: true }
 );
 

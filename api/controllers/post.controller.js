@@ -77,7 +77,7 @@ export const create = async (req, res, next) => {
 <body>
     <div class="email-container">
         <div class="email-header">
-            <h1>Campus Diaries</h1>
+            <h1>Placement Diaries</h1>
         </div>
         <div class="email-body">
             <p>Dear User,</p>
@@ -90,7 +90,7 @@ export const create = async (req, res, next) => {
 
             <p>If you have any questions or need assistance, feel free to reach out to us.</p>
 
-            <p>Best regards,<br>Campus Diaries Team</p>
+            <p>Best regards,<br>Placement Diaries Team</p>
         </div>
         <div class="email-footer">
             <p>Need help? Contact us at <a href="mailto:placementdiariestkiet@gmail.com">placementdiadirestkiet@gmail.com</a>.</p>
@@ -138,6 +138,7 @@ export const getposts = async (req, res, next) => {
             ...(req.query.userId && { userId: req.query.userId }),
             ...(req.query.category && { category: req.query.category }),
             ...(req.query.subcategory && { subcategory: req.query.subcategory }),
+            ...(req.query.branchName && { branchName: req.query.branchName }),
             ...(req.query.slug && { slug: req.query.slug }),
             ...(req.query.postId && { _id: req.query.postId }),
             ...(req.query.searchTerm && {
@@ -221,6 +222,7 @@ export const updatepost = async (req, res, next) => {
                 category: req.body.category,
                 subcategory: req.body.subcategory,
                 content: req.body.content,
+                youtubeUrl: req.body.youtubeUrl,
             }
         }, { new: true })
         res.status(200).json(updatedPost);

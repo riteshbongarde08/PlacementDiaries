@@ -105,7 +105,7 @@ export const signup = async (req, res, next) => {
 <body>
     <div class="email-container">
         <div class="email-header">
-            <h1>Campus Diaries</h1>
+            <h1>Placement Diaries</h1>
         </div>
         <div class="email-body">
             <p>Dear User,</p>
@@ -118,7 +118,7 @@ export const signup = async (req, res, next) => {
 
             <p>If you did not request this code, please ignore this email.</p>
 
-            <p>Best regards,<br>Campus Diaries Team</p>
+            <p>Best regards,<br>Placement Diaries Team</p>
         </div>
         <div class="email-footer">
             <p>Need help? Contact us at <a href="mailto:placementdiariestkiet@gmail.com">placementdiariestkiet@gmail.com</a>.</p>

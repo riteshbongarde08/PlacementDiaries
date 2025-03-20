@@ -62,7 +62,24 @@ export default function CreatePost() {
                         <option value="oncampus">On Campus</option>
                         <option value="offcampus">Off Campus</option>
                     </Select>
+                    <Select
+                        onChange={(e) => {
+                            setFormData({ ...formData, branchName: e.target.value })
+                        }}
+                    >
+                        <option value="" hidden>Select a branch</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="EnTC">EnTC</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Chemical">Chemical</option>
+                        <option value="Mechanical">Mechanical</option>
+                    </Select>
                 </div>
+                <TextInput type='url' placeholder='YouTube URL (optional)' id='youtubeUrl' className='flex-1'
+                    onChange={(e) => {
+                        setFormData({ ...formData, youtubeUrl: e.target.value })
+                    }}
+                />
                 <ReactQuill theme='snow' placeholder='Write your experience here...' className='h-72 mb-12' required
                     onChange={(value) => {
                         setFormData({ ...formData, content: value });

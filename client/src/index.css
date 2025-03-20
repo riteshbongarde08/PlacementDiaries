@@ -196,3 +196,32 @@ input:checked+.slider:before {
 .terms-container ul li {
     margin-bottom: 5px;
 }
+
+/* Define the keyframe animation for the text sliding in from the left */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the heading */
+.homepage h1.text-3xl {
+    animation: slideInLeft 1s ease-out;
+}
+
+/* Apply the animation to the paragraph text */
+.homepage p.text-xs {
+    animation: slideInLeft 1.2s ease-out;
+    animation-delay: 0.2s;
+}
+
+/* Apply the animation to the link */
+.homepage a.text-xs {
+    animation: slideInLeft 1.4s ease-out;
+    animation-delay: 0.4s;
+}
