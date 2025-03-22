@@ -128,7 +128,7 @@ export const signup = async (req, res, next) => {
 </html>
 `;
 
-            sendEmail(email, subject, htmlContent);
+            await sendEmail(email, subject, htmlContent);
             return res.json({ success: true, message: 'OTP sent to your email' });
         }
 
